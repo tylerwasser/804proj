@@ -1,24 +1,14 @@
 
-# import random
-
-# import tensorflow as tf
-
-# from supervised_reptile.args import argument_parser, model_kwargs, train_kwargs, evaluate_kwargs
-# from supervised_reptile.eval import evaluate
-# from supervised_reptile.models import MiniImageNetModel
-# from supervised_reptile.miniimagenet import read_dataset
-# from supervised_reptile.train import train
-
 import csv
 import os
 from shutil import copyfile
 
-DATA_DIR = 'data/miniimagenet'
 
 def main():
     """
     Script for sorting images into classes
     """
+
     with open('data/all/test.csv') as csv_file:
         csv_reader = csv.reader(csv_file, delimiter=',')
         row_count = 0
@@ -42,11 +32,6 @@ def main():
             copyfile(name, 'data/all/test/' + key + '/' + pic + '.jpg')
 
 
-
-
-
-
-    print(classes)
 
     
 
